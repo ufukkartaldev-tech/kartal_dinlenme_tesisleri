@@ -1,99 +1,84 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  const socialLinks = [
-    { icon: Mail, href: '#', label: 'Instagram' },
-    { icon: Mail, href: '#', label: 'Facebook' },
-    { icon: Mail, href: '#', label: 'Twitter' },
-  ];
-
   return (
     <footer className="bg-brand-dark text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo & Description */}
+          {/* Logo & Slogan */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-brand-red mb-4">
+            <h3 className="text-3xl font-bold text-brand-red mb-3">
               KARTAL
             </h3>
-            <p className="text-gray-300 leading-relaxed">
-              Yolculuğunuzun en konforlu ve güvenli durağı. 
-              Kaliteli hizmet anlayışımızla hizmetinizdeyiz.
+            <p className="text-gray-300 text-lg font-medium mb-2">
+              Yolculuğun Konforlu Durağı
+            </p>
+            <p className="text-gray-400 leading-relaxed">
+              Kaliteli hizmet anlayışımızla, yolculuğunuzun en güvenli ve lezzetli molasını sunuyoruz.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Hızlı Erişim</h4>
-            <ul className="space-y-2">
+          <div className="md:col-span-1 text-center">
+            <h4 className="text-xl font-semibold mb-6 text-white">Hızlı Erişim</h4>
+            <ul className="space-y-3">
               <li>
-                <a href="/" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Anasayfa
-                </a>
-              </li>
-              <li>
-                <a href="/hizmetlerimiz" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a href="/hizmetlerimiz" className="text-gray-300 hover:text-brand-red transition-colors duration-200 text-lg">
                   Hizmetlerimiz
                 </a>
               </li>
               <li>
-                <a href="/fiyat-listesi" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a href="/fiyat-listesi" className="text-gray-300 hover:text-brand-red transition-colors duration-200 text-lg">
                   Fiyat Listesi
                 </a>
               </li>
               <li>
-                <a href="/iletisim" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a href="/iletisim" className="text-gray-300 hover:text-brand-red transition-colors duration-200 text-lg">
                   İletişim
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Address & Directions */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4">İletişim</h4>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-brand-red" />
+            <h4 className="text-xl font-semibold mb-6 text-white">Konum & İletişim</h4>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-brand-red mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Karadeniz Sahil Yolu Üzeri<br />
+                    <span className="font-semibold text-white">İkisu / Gümüşhane</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-brand-red flex-shrink-0" />
                 <a 
                   href="tel:+904623456789" 
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="text-gray-300 hover:text-brand-red transition-colors duration-200"
                 >
                   +90 (462) 345 67 89
                 </a>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-brand-red" />
-                <p className="text-gray-300 text-sm">
-                  İkisu / Gümüşhane
-                </p>
-              </div>
-            </div>
 
-            {/* Social Media */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-gray-700 hover:bg-brand-red rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
-                    aria-label={social.label}
-                  >
-                    <IconComponent className="w-5 h-5" />
-                  </a>
-                );
-              })}
+              <p className="text-sm text-gray-400 mt-4">
+                Yol tarifi için Google Haritalar'dan "Kartal Dinlenme Tesisleri" aratabilirsiniz.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-300">
-            © 2026 Kartal Dinlenme Tesisleri. Yolculuğun Konforlu Durağı.
-          </p>
+        <div className="border-t border-gray-700 mt-10 pt-8">
+          <div className="text-center">
+            <p className="text-gray-400 text-sm leading-relaxed">
+              © 2026 Kartal Dinlenme Tesisleri - Tüm Hakları Saklıdır. | 
+              <span className="text-gray-300"> Akçaabat, Trabzon & İkisu, Gümüşhane</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
