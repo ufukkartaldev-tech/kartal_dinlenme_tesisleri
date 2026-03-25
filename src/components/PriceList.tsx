@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import { Coffee, UtensilsCrossed, Wine } from 'lucide-react';
 
 const PriceList = () => {
+  const [activeCategory, setActiveCategory] = useState('Hepsi');
+
   const menuCategories = [
     {
       title: 'Kahvaltı',
@@ -34,6 +39,18 @@ const PriceList = () => {
     },
   ];
 
+  const categories = ['Hepsi', 'Kahvaltı', 'Yemekler', 'İçecekler'];
+
+  const getFilteredCategories = () => {
+    if (activeCategory === 'Hepsi') {
+      return menuCategories;
+    }
+    if (activeCategory === 'Yemekler') {
+      return menuCategories.filter(cat => cat.title === 'Ana Yemekler');
+    }
+    return menuCategories.filter(cat => cat.title === activeCategory);
+  };
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,14 +64,34 @@ const PriceList = () => {
           </p>
         </div>
 
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                activeCategory === category
+                  ? 'bg-brand-red text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         {/* Menu Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {menuCategories.map((category, categoryIndex) => {
+          {getFilteredCategories().map((category, categoryIndex) => {
             const IconComponent = category.icon;
             return (
               <div
-                key={categoryIndex}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                key={`${category.title}-${activeCategory}`}
+                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-500 transform hover:scale-105 animate-fade-in"
+                style={{
+                  animationDelay: `${categoryIndex * 100}ms`,
+                }}
               >
                 {/* Category Header */}
                 <div className="flex items-center mb-6">
@@ -70,8 +107,12 @@ const PriceList = () => {
                 <div className="space-y-4">
                   {category.items.map((item, itemIndex) => (
                     <div
-                      key={itemIndex}
-                      className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
+                      key={item.name}
+                      className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0 opacity-0 animate-slide-up"
+                      style={{
+                        animationDelay: `${(categoryIndex * 100) + (itemIndex * 50)}ms`,
+                        animationFillMode: 'forwards',
+                      }}
                     >
                       <span className="text-gray-700 font-medium flex-1 pr-4">
                         {item.name}
