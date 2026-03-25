@@ -3,6 +3,7 @@ import Services from '@/components/Services';
 import PriceList from '@/components/PriceList';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,12 +14,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Services />
-      <PriceList />
-      <Contact />
-      <Footer />
-    </main>
+    <PageTransition>
+      <main>
+        <Hero />
+        <Services />
+        <PriceList />
+        <Contact />
+        <Footer />
+      </main>
+    </PageTransition>
   );
 }
