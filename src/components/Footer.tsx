@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-3">
               <div className="relative w-12 h-12">
                 <Image
-                  src="/logo.png"
+                  src="/assets/kartal-logo.png"
                   alt="Kartal Dinlenme Tesisleri Logo"
                   fill
                   className="object-contain"

@@ -39,7 +39,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative w-10 h-10">
               <Image
-                src="/logo.png"
+                src="/assets/kartal-logo.png"
                 alt="Kartal Dinlenme Tesisleri Logo"
                 fill
                 className="object-contain"
