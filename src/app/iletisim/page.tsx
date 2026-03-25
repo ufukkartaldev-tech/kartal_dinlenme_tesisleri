@@ -2,8 +2,9 @@ import Contact from '@/components/Contact';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'İletişim - Kartal Dinlenme Tesisleri',
-  description: 'Bize ulaşın, konum bilgilerimiz ve yol tarifi alın.',
+  title: 'İletişim ve Konum | Kartal Dinlenme Tesisleri - İkisu/Gümüşhane',
+  description: 'Bize ulaşın, konum bilgilerimiz ve yol tarifi alın. İkisu/Gümüşhane konumunda 7/24 ulaşılabilir hizmet.',
+  keywords: ['iletişim', 'konum', 'yol tarifi', 'İkisu', 'Gümüşhane', 'adres', 'telefon'],
 };
 
 export default function IletisimPage() {

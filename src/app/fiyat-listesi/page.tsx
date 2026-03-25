@@ -2,8 +2,9 @@ import PriceList from '@/components/PriceList';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fiyat Listesi - Kartal Dinlenme Tesisleri',
-  description: 'Kahvaltı, ana yemekler ve içeceklerimizin güncel fiyat listesi.',
+  title: 'Güncel Menü ve Fiyat Listesi | Kartal Dinlenme Tesisleri',
+  description: 'Kahvaltı, ana yemekler ve içeceklerimizin güncel fiyat listesi. Serpme kahvaltı, sac kavurma ve daha fazlası uygun fiyatlarla.',
+  keywords: ['menü fiyatları', 'serpme kahvaltı', 'sac kavurma', 'günün çorbası', 'fiyat listesi', 'yemek menüsü'],
 };
 
 export default function FiyatListesiPage() {

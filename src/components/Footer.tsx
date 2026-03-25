@@ -65,7 +65,14 @@ const Footer = () => {
               </div>
 
               <p className="text-sm text-gray-400 mt-4">
-                Yol tarifi için Google Haritalar'dan "Kartal Dinlenme Tesisleri" aratabilirsiniz.
+                <a 
+                  href="https://www.google.com/maps/place/Kartal+Dinlenme+Tesisleri/@40.5240062,39.3725031,20.5z/data=!4m14!1m7!3m6!1s0x4064e25bc9b4fc05:0x612e8cf65a43fe1b!2sKartal+Dinlenme+Tesisleri!8m2!3d40.5239303!4d39.3724092!16s%2Fg%2F113h9k2__!3m5!1s0x4064e25bc9b4fc05:0x612e8cf65a43fe1b!8m2!3d40.5239303!4d39.3724092!16s%2Fg%2F113h9k2__?entry=ttu&g_ep=EgoyMDI2MDMyMy4xIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-red transition-colors duration-200"
+                >
+                  Google Haritalar'dan yol tarifi alın →
+                </a>
               </p>
             </div>
           </div>

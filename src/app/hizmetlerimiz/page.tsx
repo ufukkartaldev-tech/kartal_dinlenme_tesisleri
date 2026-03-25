@@ -2,8 +2,9 @@ import Services from '@/components/Services';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hizmetlerimiz - Kartal Dinlenme Tesisleri',
-  description: 'Restoran, market, mescit ve otopark hizmetlerimiz hakkında detaylı bilgi.',
+  title: 'Hizmetlerimiz | Restoran, Market ve Dinlenme Alanları - Kartal Dinlenme Tesisleri',
+  description: 'Restoran, market, mescit, WC ve geniş otopark alanlarımızla 7/24 hizmetinizdeyiz. Temiz ve güvenli dinlenme imkanları.',
+  keywords: ['restoran hizmetleri', 'market', 'mescit', 'WC', 'otopark', 'dinlenme alanları', 'Gümüşhane'],
 };
 
 export default function HizmetlerimizPage() {
