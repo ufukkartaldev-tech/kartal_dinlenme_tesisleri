@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Slogan */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-3">
-              <div className="relative w-12 h-12">
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="relative w-20 h-20">
                 <Image
                   src="/assets/kartal-logo.png"
                   alt="Kartal Dinlenme Tesisleri Logo"
@@ -17,7 +17,7 @@ const Footer = () => {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-3xl font-bold text-brand-red">
+              <h3 className="text-4xl font-bold text-brand-red">
                 KARTAL
               </h3>
             </div>
