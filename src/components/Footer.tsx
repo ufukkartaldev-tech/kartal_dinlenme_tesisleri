@@ -1,10 +1,16 @@
 import { Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import WeatherWidget from '@/components/WeatherWidget';
 
 const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Weather Widget */}
+        <div className="flex justify-center mb-8">
+          <WeatherWidget />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Slogan */}
           <div className="md:col-span-1">
