@@ -1,4 +1,5 @@
 import { Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -7,9 +8,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Slogan */}
           <div className="md:col-span-1">
-            <h3 className="text-3xl font-bold text-brand-red mb-3">
-              KARTAL
-            </h3>
+            <div className="flex items-center space-x-3 mb-3">
+              <div className="relative w-12 h-12">
+                <Image
+                  src="/logo.png"
+                  alt="Kartal Dinlenme Tesisleri Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-3xl font-bold text-brand-red">
+                KARTAL
+              </h3>
+            </div>
             <p className="text-gray-300 text-lg font-medium mb-2">
               Yolculuğun Konforlu Durağı
             </p>

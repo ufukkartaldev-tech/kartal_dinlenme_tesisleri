@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -34,7 +36,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="relative w-10 h-10">
+              <Image
+                src="/logo.png"
+                alt="Kartal Dinlenme Tesisleri Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <span className="text-2xl font-bold text-brand-red">
               KARTAL
             </span>
