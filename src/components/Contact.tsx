@@ -30,10 +30,10 @@ const Contact = () => {
               <div>
                 <h4 className="font-semibold text-brand-dark mb-1">Telefon</h4>
                 <a 
-                  href="tel:+904623456789" 
+                  href="tel:+904562431002" 
                   className="text-brand-red hover:text-red-700 transition-colors duration-200 text-lg font-medium"
                 >
-                  +90 (462) 345 67 89
+                  +90 (456) 243 10 02
                 </a>
               </div>
             </div>
@@ -69,26 +69,29 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map Placeholder */}
+          {/* Map */}
           <div className="lg:pl-8">
             <h3 className="text-2xl font-semibold text-brand-dark mb-6">
               Konum & Yol Tarifi
             </h3>
             
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-gray-300">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-500 font-medium">Google Haritalar</p>
-                <p className="text-gray-400 text-sm mt-2">
-                  Harita entegrasyonu yakında eklenecek
-                </p>
-              </div>
+            <div className="rounded-2xl shadow-lg overflow-hidden h-80 mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.883726743958!2d39.37022067645107!3d40.52393434861205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4068e259c9b4fc05%3A0x612e8cf65a43fee1!2sKartal%20Dinlenme%20Tesisleri!5e0!3m2!1str!2str!4v1711398000000!5m2!1str!2str"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kartal Dinlenme Tesisleri Konumu"
+              />
             </div>
 
             {/* Direction Button */}
-            <div className="mt-6">
+            <div>
               <a
-                href="https://www.google.com/maps/place/Kartal+Dinlenme+Tesisleri/@40.5240062,39.3725031,20.5z/data=!4m14!1m7!3m6!1s0x4064e25bc9b4fc05:0x612e8cf65a43fe1b!2sKartal+Dinlenme+Tesisleri!8m2!3d40.5239303!4d39.3724092!16s%2Fg%2F113h9k2__!3m5!1s0x4064e25bc9b4fc05:0x612e8cf65a43fe1b!8m2!3d40.5239303!4d39.3724092!16s%2Fg%2F113h9k2__?entry=ttu&g_ep=EgoyMDI2MDMyMy4xIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/dir/?api=1&destination=40.5239303,39.3724093"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-brand-red hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
