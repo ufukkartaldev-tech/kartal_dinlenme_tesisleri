@@ -13,8 +13,10 @@ const config: Config = {
         mono: ['var(--font-geist-mono)', 'monospace'],
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        brand: {
+          red: '#DC2626', // Canlı kırmızı - güven ve enerji
+          dark: '#1F2937', // Koyu gri - kurumsallık
+        },
       },
     },
   },
