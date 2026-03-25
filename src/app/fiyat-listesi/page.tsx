@@ -1,0 +1,25 @@
+import PriceList from '@/components/PriceList';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Fiyat Listesi - Kartal Dinlenme Tesisleri',
+  description: 'Kahvaltı, ana yemekler ve içeceklerimizin güncel fiyat listesi.',
+};
+
+export default function FiyatListesiPage() {
+  return (
+    <main className="pt-16">
+      <div className="bg-brand-dark text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Fiyat Listesi
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Lezzetli yemeklerimiz ve uygun fiyatlarımızla hizmetinizdeyiz
+          </p>
+        </div>
+      </div>
+      <PriceList />
+    </main>
+  );
+}
